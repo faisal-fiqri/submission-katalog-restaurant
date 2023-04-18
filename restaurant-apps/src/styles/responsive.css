@@ -1,0 +1,129 @@
+.restos {
+    display: grid;
+    grid-row-gap: 16px;
+  }
+  
+  @media screen and (max-width: 499px) {
+    .nav {
+      z-index: 10;
+      background-color: #fff;
+      width: 300px;
+      position: absolute;
+  
+      /* This trasform moves the drawer off canvas. */
+      -webkit-transform: translate(-300px, 0);
+      transform: translate(-300px, 0);
+  
+      /* Optionally, we animate the drawer. */
+      transition: transform 0.3s ease;
+    }
+  
+    .open {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+  
+    .nav__item {
+      display: list-item;
+      border-bottom: 1px solid #E0E0E0;
+      width: 100%;
+      text-align: left;
+    }
+  }
+  
+  @media screen and (min-width: 500px) {
+    .header__menu {
+      display: none;
+    }
+  }
+  
+  @media screen and (min-width: 650px) {
+  
+    .resto-item__content {
+      padding: 16px 32px 32px 32px;
+    }
+  
+    .resto-item__title {
+      font-size: 18px;
+    }
+  
+    .resto-item__description {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (min-width: 700px) {
+    .restos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 10px;
+      grid-row-gap: 16px;
+    }
+  }
+  
+  @media screen and (min-width: 800px) {
+    .nav__list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+    .restos {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    main {
+      max-width: 1200px;
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    nav ul{
+        width: 50%;
+    }
+    .footer{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .menu-toggle{
+        display: flex;
+    }
+
+    .logo{
+        z-index: 100;
+    }
+
+    .menu-toggle span{
+        z-index: 100;
+    }
+
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0px;
+        width: 80%;
+        height: 100vh;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        z-index: 1;
+        background-color: rgb(226, 150, 17);
+        transform: translateX(100%); 
+        transition: all 0.8s;
+        opacity: 0;
+    }
+
+    nav ul.slide{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .footer{
+        flex-direction: column;
+    }
+}
